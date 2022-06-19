@@ -75,3 +75,11 @@ article {
   color: green;
   font-weight: bold;
 }
+.btn_thanhtoan{
+  margin-top:40px;
+  background-color:red;
+  border:none;
+  border-radius:10px;
+  color:white;
+  font-size:1rem;
+}

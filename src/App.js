@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Amazon from "./components/amazon";
 import Navbar from "./components/navbar";
 import Cart from "./components/cart";
-import { MessengerChat } from "react-messenger-chat-plugin";
-
+ import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
@@ -11,6 +11,15 @@ const App = () => {
   const handleClick = (item) => {
     if (cart.indexOf(item) !== -1) return;
     setCart([...cart, item]);
+    toast.success("Bạn vừa thêm sản phẩm vào giỏ hàng", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   const handleChange = (item, d) => {
@@ -21,11 +30,6 @@ const App = () => {
     if (arr[ind].amount === 0) arr[ind].amount = 1;
     setCart([...arr]);
   };
-
-  // useEffect(() => {
-  //   console.log("cart change");
-  // }, [cart]);
-
   return (
     <>
       <Navbar setShow={setShow} size={cart.length} />
@@ -34,6 +38,20 @@ const App = () => {
       ) : (
         <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
       )}
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      {/* Same as */}
+      <ToastContainer />
     </>
   );
 };

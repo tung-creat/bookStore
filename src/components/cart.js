@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/cart.css";
+import NumberFormat from "react-number-format";
 
 const Cart = ({ cart, setCart, handleChange }) => {
   const [price, setPrice] = useState(0);
@@ -39,10 +40,21 @@ const Cart = ({ cart, setCart, handleChange }) => {
           </div>
         </div>
       ))}
-      <div className="total">
-        <span>Total Price of your Cart</span>
-        <span>Rs - {price}</span>
+      <div className="total" style={{display:"flex",justifyContent: "space-between",alignItems: "center"}}>
+        <span>Tổng đơn hàng của bạn là:</span>
+        <h1>
+          <NumberFormat
+            value={price}
+            className="foo"
+            displayType={"text"}
+            thousandSeparator={true}
+            renderText={(value, props) => <div {...props}>{value} VND</div>}
+          />
+          
+        </h1>
+        <button className="btn_thanhtoan ">Thanh toán</button>
       </div>
+      
     </article>
   );
 };

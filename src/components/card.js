@@ -1,11 +1,14 @@
-import React from "react";
+import React from "react"
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
 const Cards = ({ item, handleClick }) => {
   const { title, author, price, img } = item;
+  
   return (
     <div className="cards">
       <div className="image_box">
-        <img src={img} alt="" />
+        <img style={{ width: "100%",objectFit:"cover"}} src={img} alt="" />
       </div>
       <div className="details">
         <p>{title}</p>
