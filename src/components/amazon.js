@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import list from "../data";
 import Cards from "./card";
 import "../styles/amazon.css";
+
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { Col, Divider, Row } from "antd";
@@ -122,6 +123,7 @@ const Amazon = ({ handleClick }) => {
               <Cards key={item.id} item={item} handleClick={handleClick} />
             ))}
           </section>
+         
         </div>
       
       </main>

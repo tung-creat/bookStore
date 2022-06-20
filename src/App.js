@@ -4,6 +4,8 @@ import Navbar from "./components/navbar";
 import Cart from "./components/cart";
  import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navfot from "./components/footer"
+import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
@@ -52,6 +54,7 @@ const App = () => {
       />
       {/* Same as */}
       <ToastContainer />
+      < Navfot />
     </>
   );
 };
