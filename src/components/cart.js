@@ -118,65 +118,15 @@ const Cart = ({ cart, setCart, handleChange }) => {
             <Modal.Header closeButton>
               <Modal.Title>Thanh toán </Modal.Title>
             </Modal.Header>
-            <Modal.Body>
-              <Form>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label>Họ và tên</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Nguyễn Văn A"
-                    autoFocus
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </Form.Group>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label>SĐt</Form.Label>
-                  <Form.Control
-                    type="number"
-                    placeholder="012321323"
-                    autoFocus
-                    value={mobile}
-                    onChange={(e) => setMobile(e.target.value)}
-                  />
-                </Form.Group>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label>Địa chỉ</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="234 Nguyễn Trãi , Thanh Xuân , Hà NỘi "
-                    autoFocus
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                  />
-                </Form.Group>
-                <Form.Select
-                  aria-label="Default select example"
-                  value={thanhtoan}
-                  onChange = {(e) => setThanhtoan(e.target.value)}
-                >
-                  <option value="chuyển khoản">Chuyển Khoản </option>
-                  <option value="Tiền mặt">Tiền mặt</option>
-                </Form.Select>
-              </Form>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Đóng
-              </Button>
-              <Button variant="primary" onClick={(e) => submitHandler(e)}>
-                Gửi
-              </Button>
-            </Modal.Footer>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScgvkK8XTZupsF7_oBuBn7W49XWYhtvUGS8en0tGPmDByJeuA/viewform?embedded=true"
+              width="500"
+              height="900"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+            >
+            </iframe>
           </Modal>
         </>
       </div>
